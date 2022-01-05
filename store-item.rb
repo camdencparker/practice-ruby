@@ -5,37 +5,19 @@
 
 
 class Store 
+  # can be solved using attr_reader or attr_writer or attr_accessor
+
+  attr_reader :input_meat, :input_weight, :input_price
+  attr_writer :input_price, :input_meat
+
   def initialize(input_price, input_meat, input_weight)
     @price = input_price
     @meat = input_meat
     @weight = input_weight
   end
 
-  def price
-    @price
-  end
-
-
-  def price=(input_amount)
-    @price = input_amount
-  end
-
-  def meat
-    @meat
-  end
-
-
-  def meat=(input_meat)
-    @meat = input_meat
-  end
-
-  def weight
-    @weight
-  end
 
 end
 
 customer1 = Store.new(200, "turtle", "100lbs")
-p customer1.price
-p customer1.meat
-p customer1.weight
+p customer1
