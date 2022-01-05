@@ -10,14 +10,14 @@ class Store
   attr_reader :input_meat, :input_weight, :input_price
   attr_writer :input_price, :input_meat
 
-  def initialize(input_price, input_meat, input_weight)
-    @price = input_price
-    @meat = input_meat
-    @weight = input_weight
+  def initialize(options_hash)
+    @price = options_hash[:input_price]
+    @meat = options_hash[:input_meat]
+    @weight = options_hash[:input_weight]
   end
 
 
 end
 
-customer1 = Store.new(200, "turtle", "100lbs")
+customer1 = Store.new(input_price: 200, input_meat: "turtle", input_weight: "100lbs")
 p customer1
