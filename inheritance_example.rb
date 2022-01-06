@@ -27,9 +27,9 @@ class Car < Shared
   attr_writer :fuel, :make
   def initialize(options_hash)
     super
-    @fuel 
-    @make 
-    @model
+    @fuel = options_hash[:fuel]
+    @make = options_hash[:make]
+    @model = options_hash[:model]
   end
   def honk_horn
     puts "Beeeeeeep!"
@@ -41,9 +41,9 @@ class Bike < Shared
   attr_writer :type, :weight, :suspension
   def initialize(options_hash)
     super
-    @type
-    @weight
-    @suspension
+    @type = options_hash[:type]
+    @weight = options_hash[:weight]
+    @suspension = options_hash[:suspension]
   end
   def ring_bell
     puts "Ring ring!"

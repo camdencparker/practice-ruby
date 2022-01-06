@@ -20,11 +20,13 @@ class Store
 end
 
 class Food < Store
+  attr_reader :shelf_life
+  attr_writer :shelf_life
   def initialize(options_hash)
-    
-
+    super
+    @shelf_life = options_hash[:shelf_life]
   end
 end
 
 customer1 = Store.new(input_price: 200, input_meat: "turtle", input_weight: "100lbs")
-p customer1
+p 
