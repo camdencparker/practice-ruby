@@ -19,5 +19,12 @@ class Store
 
 end
 
+class Food < Store
+  def initialize(options_hash)
+    
+
+  end
+end
+
 customer1 = Store.new(input_price: 200, input_meat: "turtle", input_weight: "100lbs")
 p customer1
